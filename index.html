@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading...</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: #333;
+      text-align: center;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      margin: 100px auto;
+      width: 320px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    #countdown {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ff4d4d;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #4facfe;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #007bff;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Please Wait...</h2>
+  <p>Redirecting in <span id="countdown">5</span> seconds</p>
+
+  <button onclick="goNow()">Continue Now</button>
+
+  <p style="margin-top:10px;">
+    If not working, <a href="https://www.facebook.com/kokonsarker.official">Click here</a>
+  </p>
+</div>
+
+<script>
+  var timeLeft = 5;
+
+  var timer = setInterval(function() {
+    timeLeft--;
+    document.getElementById("countdown").innerText = timeLeft;
+
+    if(timeLeft <= 0){
+      clearInterval(timer);
+      window.location.href = "https://www.facebook.com/kokonsarker.official";
+    }
+  }, 1000);
+
+  function goNow(){
+    window.location.href = "https://www.facebook.com/kokonsarker.official";
+  }
+</script>
+
+</body>
+</html>
